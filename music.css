@@ -1,0 +1,81 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans" sans-serif;
+
+}
+body
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(apple.jpg) no-repeat;
+    background-size: cover;
+
+}
+.blog-posts
+{
+    width: min(1200px, 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.posts
+{
+    width: calc(33% - 10px);
+    overflow: hidden;
+
+}
+.post-img
+{
+    width: 100%;
+    border-radius: 6px;
+    transition: .3s linear;
+}
+.bost-content
+{
+    background-color: rgb(172, 170, 170);
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 6px;
+    transform: translateY(-60px);
+    transition: .3s linear;
+}
+
+.bost-content h3
+{
+    font-size: 16px;
+    margin-bottom: 10px;
+
+
+}
+.date
+{
+    font-size: 15px;
+    font-style: italic;
+    color: #1E90FF;
+}
+
+.posts:hover .post-img
+{
+    transform: translateY(30px);
+}
+
+.posts:hover .bost-content
+{
+    transform: translateY(-90px);    
+}
+@media screen and (max-width: 1200px)
+{
+    .blog-posts{
+        justify-content: center;
+    }
+    .posts
+    {
+        width: min(600px, 10%);
+    }
+}
